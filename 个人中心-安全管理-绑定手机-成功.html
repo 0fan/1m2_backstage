@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>绑定手机成功-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body class="userCenter">
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="mod-result">
+				<div class="mod-result-content success">
+					<h3>恭喜您，手机绑定成功！</h3>
+					<p class="mod-result-txt">可用于快速找回登录密码及支付密码。</p>
+				</div>
+				<div class="mod-result-action">
+					<a href="#" class="ui-button ui-blue-button">返回安全管理</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+
+		/*验证码*/
+		var veri = veri_count =  60, /*默认秒数*/
+		    veri_timer = null;
+		$("#get_veri").on("click",function(){
+			if(veri == veri_count){
+				new Window().common({content:"发送成功!"}); /*Ajax判断*/
+				$(this).attr("disabled","true");
+				var that = $(this);
+				var veri_txt = that.text();
+				veri_timer = setInterval(function(){
+					if(--veri_count < 0){
+						that.removeAttr("disabled");
+						that.text(veri_txt);
+						clearInterval(veri_timer);
+						veri_count = veri;
+					}else{
+						that.text(veri_count);	
+					}
+				},1000);
+			}
+		});
+		/*end 验证码*/
+		
+	})();
+
+	
+</script>
+</html>

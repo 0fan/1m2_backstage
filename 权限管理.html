@@ -1,0 +1,654 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>权限管理-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt nav_txt_h"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 10px;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="main_content">
+				<h1 class="main_tit">权限管理</h1>
+				<div class="mod-check">
+					<div class="mod-check-wrap">
+						<div class="mod-check-content">
+							<!-- form -->
+							<form action="#">
+								<!-- mod-check-block -->
+								<div class="mod-check-block">
+									<label class="mod-check-tit">
+										<span class="mod-check-tit-txt">业务权限管理</span>
+										<input type="checkbox" name="" id="">
+									</label>
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">渠道商管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">详情</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">添加</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">开发商管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">详情</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">添加</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">操作员管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改操作员</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">新增操作员</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">终端管理</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">楼盘管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改楼盘</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">新增楼盘</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">楼盘户型管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改户型</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">新增户型</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">收款单位管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">详情</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">添加</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">收单列表</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">导入</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">信息补全</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">导出收单数据</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">结算</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改收单</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">财务中心</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">交易管理</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">提现记录</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">收款方主页</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">用户主页</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">支付审核列表</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">支付流水列表</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">申请支付</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">一体机收单列表</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">渠道商访客信息</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">开发商访客信息</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">补全信息</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">导出</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">收款方主页</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">代理商管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">详情</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">添加</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">畅捷代付列表</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">代付审核</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">开发商首页</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">收单列表</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">银行支撑列表</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改状态</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">认筹金列表</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">POS收单列表</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">信息补全</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">导出收单数据</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">结算</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改收单</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">区域管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">新增</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">待审核支付(开发商)</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item" style="margin-bottom: 20px;"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">一体机失败列表</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+								</div>
+								<!-- end mod-check-block -->
+								<!-- mod-check-block -->
+								<div class="mod-check-block">
+									<label class="mod-check-tit">
+										<span class="mod-check-tit-txt">系统管理</span>
+										<input type="checkbox" name="" id="">
+									</label>
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">角色管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">详情</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">分配角色</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">添加</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+									<div class="mod-check-item"> <!-- item -->
+										<div class="mod-check-item-tit">
+											<label>
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-tit-txt">用户管理</span>
+											</label>
+										</div>
+										<div class="mod-check-item-content">
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">详情</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">修改</span>
+											</label>
+											<label class="mod-check-list">
+												<input type="checkbox" name="" id="">
+												<span class="mod-check-item-content-txt">添加</span>
+											</label>
+										</div>
+									</div><!-- end item -->
+								</div>
+								<!-- end mod-check-block -->
+								<div class="mod-check-action">
+									<!-- 保存按钮在这里 -->
+									<a href="javascript:void(0);" onclick="return false;" class="ui-button" id="save">保存</a>
+								</div>
+							</form>
+							<!-- end form -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+
+		
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+
+		/*mod-check*/
+		/*== 标题栏全选 ==*/
+		$(".mod-check-block").on("click",".mod-check-tit input:checkbox",function(){
+			$(this).parents(".mod-check-block").find("input:checkbox").attr("checked",($(this).attr("checked") != undefined));
+		});
+		/*== 块级全选 ==*/
+		$(".mod-check-block").on("click",".mod-check-item-tit input:checkbox",function(){
+			$(this).parents(".mod-check-item").find("input:checkbox").attr("checked",($(this).attr("checked") != undefined));
+		});
+		/*== 如果子选择有选择事件则块级默认选中，否则判断子元素是否全部都没有选择，如果是则块级标题选择取消 ==*/
+		$(".mod-check-item-content").on("click","input:checkbox",function(){
+			if($(this).attr("checked") != undefined){
+				$(this).parents(".mod-check-item").find(".mod-check-item-tit input:checkbox").attr("checked",true);
+			}else{
+				var flag = true;
+				var o = $(this).parents(".mod-check-item").find(".mod-check-item-content input:checkbox");
+				for(var i = 0,len = o.length;i<len;i++){
+					if(o.eq(i).attr("checked") != undefined){
+						flag = false;
+						break;
+					}
+				}
+				if(flag){
+					$(this).parents(".mod-check-item").find(".mod-check-item-tit input:checkbox").attr("checked",false);
+				}
+			}
+		});
+		/*end mod-check*/
+
+	})();
+
+
+	
+</script>
+</html>

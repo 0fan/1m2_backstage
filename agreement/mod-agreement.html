@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>mod-agreement</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.mod-agreement,
+		.mod-agreement *{box-sizing: border-box;}
+		.mod-agreement .tc{text-align: center;}
+		.mod-agreement .tr{text-align: right;}
+		.mod-agreement .tl{text-align: left;}
+		.mod-agreement .var{padding: 0 .75em;border-bottom: 1px solid #333;font-weight: bold;}
+		.mod-agreement .hid{opacity: 0;transform: scale(0.5);filter:alpha(opacity=0);position: absolute;}
+		.mod-agreement .show{opacity: 1;transform: scale(1);filter:alpha(opacity=100);position: relative;}
+		.mod-agreement-mask{position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;background: #000;opacity: .4;filter:alpha(opacity=40);z-index: 1000;}
+		.mod-agreement{position: fixed;width: 680px;height: 656px;top: 0;right: 0;bottom: 0;left: 0;margin: auto;box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, .2);z-index: 1010;font-size: 14px; line-height: 1.4286; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif; -webkit-font-smoothing: antialiased; color: #000;}
+		.mod-agreement .act{user-select:none;cursor: pointer;text-decoration: none;outline: 0;}
+		.mod-agreement-header{height: 44px;line-height: 43px;border-bottom: 1px solid #c6c6c6;background-color: #f7f7f7;border-radius: 3px 3px 0 0;position: relative;padding: 0 10px;}
+		.mod-agreement-header > .tit{font-size: 16px;}
+		.mod-agreement-header .mod-agreement-cloBtn{display: inline-block;text-indent: -9999px;height: 24px;width: 24px;text-decoration: none;background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAYCAMAAABuvUuCAAABWVBMVEUAAAD2U0bOKyP5b2LTSTzyMynNKiL1UUb1UUbOLCP2VEf1Vkv2X1T0QzbQOS75c2TTTT7xMSjQOS73Wk30TULyNy3OLybyMijOKyL4b2HSSTv4YlP1T0PyNiz2V0rxMCb5cWLTSzz4W0n2XE/NKiHTTT/4bWDSRzr2YlfzUUn1RznzPzPxMynNKyP5dGb5dGbTTkD2ZVjQPzL4W0r5dGbTTkDRQjXzT0fxMCf4cWLSSzz2VEf4XEvTTkD4XEvTTkDNKCDxMCfNKSHOLyX0VUz3VkX3Z1v////RQTTyNyzzUUnzTkbTTD3SSDr0Qzb2XVL5cWH2YVbQOzDQNyz1SDr2Tj/5c2X4Wkn2UULRRTj3a174bWDyOS71WVDzPzPzPDHPMyr93Nv82dfz19b809HwzMr7wr77y8n7urb8z836vbrqt7T5tbPps7H75OL5rqrtwL7nqaXUVUvgRdlTAAAAQXRSTlMAHh8eHh7286d2WCD5+fn09PPkubm5uaenpqZ3d3dzVlVV8+RZ/fPz5OTk5OTk3bm5uLimeHh3cXFwcE7449fXTuIDvbQAAAJvSURBVDjLdZT3UxpBGIY/7o4mKEjv2HvvmgqoK0hiiTUhRaTZIOb//yG7+91exedm9pv3ndlndm/mDlTkjeWlQGBpeUMGE8rmyodg8NPKpmLuHenw+Puxj+G0z1TLySuNpGzQpCarKpMpxaBZv9ZYd+j9SODKQGBE9KPBqoHgqOjfjV0bGBsQ/e6phV3s96oW9rDPHVjIqec5tTHCz/PFBj/TwIENfiZ56oeNKRlAmbaLphUAh9sucrP3lPzehyRA6rYPKQDPTR88APIhp9XC2ejglJXbI8bT0xGn+crHreK7uWR0Opechx4fNz5I831XXdLiHtJAUXqLb/zXJU/cQ5oo3MrwjSdd0uEe8oDCDKweInfMdEc9yOraEXLPTPfUg6xFLpA66bDlQY0RmDlToSbqEWkmdK5CTdQjUmjuQjdxDzIH/jPdRNpa8A+d6ybyVwtDg18FdUJaWhgE/4mAibTgH/omYCItvC0a1z2P9GoijYd0zwu9mkih+V8qdfJcJ22R5iH8E6EetjTUGI79QaiHLU01xqK/EephS1uNUcjtMw6ph01q2ufkvCVGlXrYpKYSx5utMY6ph01qqnGy4MONj484Gz2cPgk3vrzgbL7ilJy1MuP5ucxp9/ioOQE8+33wACRKfUgAxMt9iAP7CCs22EcouYo2XBKAc7hgY9jJfwt2Ef8tTBRLlqc4wfp8oWx5CnngbFeOzWxj7y1a8GK/U7Cwo/063UaNe0D0n12me02IPj9sulceNBwe3eNx6L2U0D0JSe+dcd0Td4IRRyYyW6nMRjI+MCF5Y4su12LMixpdlY0ulMsL0azQ/AdjM48TuPcgRAAAAABJRU5ErkJggg==") no-repeat 0 0;position: absolute;top: 50%;right: 10px;margin-top: -12px;}
+		.mod-agreement-header .mod-agreement-cloBtn:hover,
+		.mod-agreement-header .mod-agreement-cloBtn.hover{background-position: -48px 0;}
+		.mod-agreement-header .mod-agreement-cloBtn:active,
+		.mod-agreement-header .mod-agreement-cloBtn.active{background-position: -24px 0;}
+		.mod-agreement-main{height: 568px;background-color: #fff;padding: 20px 40px 0;overflow-y: scroll;font-size: 12px;}
+		.mod-agreement-footer{height: 44px;line-height: 43px;border-top: 1px solid #c6c6c6;background-color: #f7f7f7;border-radius: 0 0 3px 3px;text-align: center;}
+		.mod-agreement-btn{line-height: 1.4286;padding: 4px 10px;border-radius: 3px;display: inline-block;color: #fff;background: rgb(46,153,247);position: relative;background: #2196f3;transition: all 0.2s;}
+		.mod-agreement-btn:hover,
+		.mod-agreement-btn.hover{background-color: #42a5f5;}
+		.mod-agreement-btn:active,
+		.mod-agreement-btn.active{background-color: #1e88e5;}
+		.mod-agreement-btn[disabled],
+		.mod-agreement-btn[disabled]:hover,
+		.mod-agreement-btn[disabled]:active,
+		.mod-agreement-btn[disabled]:focus,
+		.mod-agreement-btn.disabled,
+		.mod-agreement-btn.disabled:hover
+		.mod-agreement-btn.disabled:active,
+		.mod-agreement-btn.disabled:focus{color: #ccc!important;background-color: #f7f7f7!important;border:1px solid #d9d9d9!important;text-decoration: none!important;cursor: default;}
+		.mod-agreement-btn[disabled]:hover .mod-agreement-tip,
+		.mod-agreement-btn.disabled:hover .mod-agreement-tip{opacity: 1;filter:alpha(opacity=100);transform: translate(0,0);}
+		.mod-agreement-tip{position: absolute;background: #333;background: rgba(0,0,0,.9);padding: 5px 10px;border-radius: 3px;width: 220px;margin-left: -80px;top: -50px;color: #fff;transition: all 0.3s;transform: translate(0 , 6px);opacity: 0;filter:alpha(opacity=0);}
+		.mod-agreement-tip:after{content: "";position: absolute;width: 0;height: 0;border-style: solid;border-color: transparent;border-width: 8px;border-top-color: #333;border-top-color: rgba(0,0,0,.9);left: 50%;margin-left: -8px;bottom: -16px;}
+		.mod-agreement-main h1{font-size: 20px;text-align: center;margin-bottom: 10px;font-weight: bold;line-height: 1.5;}
+		.mod-agreement-main h2{font-size: 16px;text-align: left;margin: 10px 0;font-weight: bold;line-height: 1.5;}
+		.mod-agreement-main p{margin-bottom: 6px;}
+	</style>
+</head>
+<body>
+	<!-- mod-agreement -->
+	<div class="mod-agreement-mask"> </div>
+	<div class="mod-agreement">
+		<div class="mod-agreement-header">
+			<span class="tit">壹平方团购协议</span>
+			<a class="mod-agreement-cloBtn act" href="javascript:void(0);" onclick="return false;">关闭</a>
+		</div>
+		<div class="mod-agreement-main" id="j-scrollContent">
+			<h1>壹平方团队服务协议</h1>
+			<p class="tr">合同编号：<span class="var">56545464654</span></p>
+			<p>甲　方：重庆壹平方米网络科技有限公司（以下简称“甲方”）</p>
+			<p>购房人：（以下简称“乙方”）<span class="var">小背心</span></p>
+			<div style="overflow:hidden;">
+				<p style="float: left;width: 50%;margin: 0;">联系电话：<span class="var">15870448346</span></p>
+				<p style="float: left;width: 50%;margin: 0;">身份证号：<span class="var">500236199208188888</span></p>
+			</div>
+			<p style="margin: 20px 0;text-indent: 2em;">
+				甲方组织项目团购优惠服务甲、乙双方本着平等、自愿、公平、诚信的原则，就乙方参加甲方组织的团购活动达成如下协议：
+			</p>
+			<h2>一、团购服务费</h2>
+			<p style="height: 2000px;"></p>
+		</div>
+		<div class="mod-agreement-footer">
+		<a id="disSubmit" class="mod-agreement-btn disabled act" href="javascript:void(0);" onclick="return false;">
+			确认协议
+			<div class="mod-agreement-tip">
+				请把滚动条拉至底部再点击确定
+			</div>
+		</a>
+			<a style="display: none;" id="submit" class="mod-agreement-btn act" href="javascript:void(0);" onclick="return false;">确认协议</a>
+		</div>
+	</div>
+	<!-- end mod-agreement -->
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+	$("#j-scrollContent").on("scroll",function(e){
+		if( $(e.target).outerHeight()+$(e.target).scrollTop() == $(e.target)[0].scrollHeight ){
+			$("#disSubmit").hide();
+			$("#submit").show();
+		}
+	});
+</script>
+</html>

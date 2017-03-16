@@ -1,0 +1,273 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>个人中心-账户资料-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body class="userCenter">
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<!-- mod-userCenter -->
+			<div class="mod-userCenter">
+				<div class="mod-userCenter-header">
+					<ul class="mod-userCenter-nav clr">
+						<li class="mod-userCenter-item">
+							<a href="#" class="mod-userCenter-nav-h">账户资料</a>
+						</li>
+						<li class="mod-userCenter-item">
+							<a href="#">安全管理</a>
+						</li>
+						<li class="mod-userCenter-item">
+							<a href="#">银行卡管理</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mod-userCenter-content">
+					<h3>账户资料</h3>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">头像</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<div class="mod-userCenter-avatar-wrap">
+								<a class="mod-userCenter-modifyAvatar" href="javascript:void(0);" onclick="return false;" id="mod-userCenter-avatar">
+									<img src="img/loading_logo.jpg.png" alt="">
+									<span class="mod-userCenter-modify-txt">修改头像</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">用户名</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<span class="mod-userCenter-item-content-txt">admins</span>
+						</div>
+					</div>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">企业代码</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<span class="mod-userCenter-item-content-txt">ypf</span>
+						</div>
+					</div>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">渠道商单位名称</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<span class="mod-userCenter-item-content-txt">壹平方网络科技公司</span>
+						</div>
+					</div>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">联系方式</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<span class="mod-userCenter-item-content-txt">15870448646</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end mod-userCenter -->
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	<!-- 修改头像 -->
+	<div class="w_avatar w_avatar_hide">
+		<form action="#" id="form_avatar">
+			<div class="w_avatar_h">
+				<span class="w_avatar_title">修改头像</span>
+				<a class="w_avatar_close" href="javascript:void(0);" onclick="return false;"></a>
+			</div>
+			<div class="w_avatar_b">
+				<ul class="w-avatar-wrap">
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">
+							<img src="./img/avatar.jpg" alt="">
+							<span class="w-avatar-focus"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="w_avatar_f">
+				<input type="submit" class="ui_button w_avatar_submit submit" value="确定" id="w_avatar_submit">
+			</div>
+		</form>
+	</div>
+	<!-- end 修改头像 -->
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+		/*头像*/
+		var index = 0;
+		$("#mod-userCenter-avatar").on("click",function(){
+			$(".w_avatar").show();
+			$(".public_mask").show();
+		});
+		$(".w_avatar_close").on("click",function(){
+			$(".w_avatar").hide();
+			$(".public_mask").hide();
+		});
+		$("#w_avatar_submit").on("click",function(){
+			$("#mod-userCenter-avatar img").attr("src",$(".w-avatar-wrap li").eq(index).find("img").attr("src"));
+			new Window().common({content:"修改成功！"});
+			$(".w_avatar").hide();
+			$(".public_mask").hide();
+		});
+		$(".w-avatar-wrap li a").on("click",function(){
+			$(".w-avatar-focus").hide();
+			if($(".w-avatar-focus",this).css("display") == "none"){
+				$(".w-avatar-focus",this).show();	
+				index = $(this).parent().index();
+			}else{
+				$(".w-avatar-focus",this).hide();
+			}
+		});
+		/*end 头像*/
+	})();
+
+	
+</script>
+</html>

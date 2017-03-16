@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;}
+/* ui-droplist */
+select.ui-droplist-orgin{position: absolute!important;clip: rect(1px, 1px, 1px, 1px)!important;}
+.ui-droplist{position: relative;display: inline-block;font-family: "\5FAE\8F6F\96C5\9ED1";z-index: 900;vertical-align: middle;margin-right: 10px;}
+.ui-droplist.mousedown .ui-droplist-content{box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05),inset 0 1px 2px rgba(0,0,0,0.2);}
+.ui-droplist.active .ui-droplist-content{border-color: #1e88e5;}
+.ui-droplist.active .ui-droplist-drop{display: block;}
+.ui-droplist .ui-droplist-content{position: relative;width: 160px;box-sizing: border-box;border-radius: 2px;border: 1px solid #d1d2d3;cursor:pointer;height: 28px;line-height: 26px;font-size: 12px;color: #1a1a1a;background: #ffffff;background: -moz-linear-gradient(top,  #ffffff 0%, #ebebeb 90%, #f3f3f3 100%);background: -webkit-linear-gradient(top,  #ffffff 0%,#ebebeb 90%,#f3f3f3 100%);background: linear-gradient(to bottom,  #ffffff 0%,#ebebeb 90%,#f3f3f3 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 );box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05),0px 0px 2px #fff inset;transition:all 0.3s;padding:0 27px 0 8px;}
+.ui-droplist .ui-droplist-content .ui-droplist-txt{overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+.ui-droplist .ui-droplist-ico{position: absolute;width: 22px;height: 14px;right: 0;top: 50%;margin-top:-7px;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAOAgMAAABWXwReAAAACVBMVEUAAAAHBgfR0tOsbm+VAAAAAXRSTlMAQObYZgAAAB9JREFUCNdjaGAAAQyKBUKJQqhQB3QlCEFRhAashgEAq7sIXdwn5fgAAAAASUVORK5CYII=) no-repeat center center;}
+.ui-droplist .ui-droplist-drop{position: absolute;display: none;padding: 5px 0;border-radius: 2px;border: 1px solid #1e88e5;background-color: #fff;margin-top: 5px;box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.12);width: 100%;box-sizing: border-box;z-index: 999;}
+.ui-droplist .ui-droplist-drop .ui-droplist-item{list-style: none;}
+.ui-droplist .ui-droplist-drop .ui-droplist-item a{display: block;text-decoration: none;color: #1a1a1a;font-size: 12px;height: 28px;line-height: 28px;transition:all 0.15s;padding: 0 10px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+.ui-droplist .ui-droplist-drop .ui-droplist-item a:hover{background-color: #1e88e5;color: #fff;}
+/* end ui-droplist */

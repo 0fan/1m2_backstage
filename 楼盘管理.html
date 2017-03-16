@@ -1,0 +1,415 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>楼盘管理-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt nav_txt_h"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 10px;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- <script>
+		(function(){
+
+			var menu = [
+				{
+					root : "1",
+					open : true,
+					drop : [
+						{
+							txt : "收单列表",
+							icon : "icon-1",
+							act : true,
+							link : "#"
+						},
+						{
+							txt : "1-2",
+							icon : "icon-codepen",
+							link : "#"
+						}
+					]
+				},
+				{
+					root : "2",
+					open : true,
+					drop : [
+						{
+							txt : "2-1",
+							icon : "icon-codepen",
+							link : "#"
+						},
+						{
+							txt : "2-2",
+							icon : "icon-wechat",
+							link : "#"
+						}
+					]
+				},
+				{
+					root : "3",
+					open : true,
+					drop : [
+						{
+							txt : "3-1",
+							icon : "icon-street-view",
+							link : "#"
+						},
+						{
+							txt : "3-1",
+							icon : "icon-street-view",
+							link : "#"
+						}
+					]
+				}
+			];
+
+			var menu_html = "<ul class='nav_container'>";
+			for(var i=0,len=menu.length;i<len;i++){
+				var m = menu[i];
+				menu_html += "<li class='nav_content " + (m.open&&"nav_open") +"'><a href='javascript:void(0);' onclick='return false;' class='nav_root'><i class='arrow-r'></i>" + m.root + "</a><ul class='nav_drop'>";
+				for(var j=0,j_len=m.drop.length;j<j_len;j++){
+					var d = m.drop[j];
+					menu_html += "<li><a href='" + d.link + "' class='nav_txt " + ( d.act&&"nav_txt_h") + "'><div class='nav_ico_wrap'><span class='nav_ico " + d.icon + "'></span></div>" + d.txt + "</a></li>";
+				}
+				menu_html += "</ul></li>";
+			}
+			menu_html += "</ul>";
+			document.getElementById("nav").innerHTML = menu_html;
+		})();
+	</script> -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="main_content">
+				<h1 class="main_tit">楼盘管理</h1>
+				<div class="mod-search">
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">开发商：</span>
+							<select name="" id="" class="ui-select ui-auto-select">
+								<option value="0">金科地产集团股份有限公司</option>
+								<option value="0">南京临江御景房地产开发</option>
+								<option value="0">绿地集团重庆公司</option>
+								<option value="0">保利房地产(集团)股份</option>
+							</select>
+						</label>
+						<label>
+							<span class="ui-label">区域：</span>
+							<select name="" id="" class="ui-select ui-auto-select">
+								<option value="0">重庆主城</option>
+								<option value="0">渝东片区</option>
+								<option value="0">四川片区</option>
+								<option value="0">江苏片区</option>
+							</select>
+						</label>
+					</div>
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">楼盘名称：</span>
+							<input type="text" class="ui-input">
+						</label>
+						<button class="ui-button">搜索</button>
+						<button class="ui-button ui-blue-button">添加</button>
+					</div>
+				</div>
+				<div class="mod-table">
+					<div class="mod-table-container">
+						<table class="mod-table-content simsun" id="table">
+							<colgroup>
+								<col width="20%">
+								<col>
+								<col>
+								<col>
+								<col style="width:160px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										<span class="mod-table-tit">
+											开发商名称
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											楼盘名称
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											负责人
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											收银员
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											操作
+										</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>金科地产集团股份有限公司</td>
+									<td>咸阳世界城</td>
+									<td>张海林</td>
+									<td>张海林</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button ui-blue-button ui-bordered-button ui-thin-button unterm_btn">解绑</button>
+											<button class="ui-button ui-blue-button ui-bordered-button ui-thin-button">修改</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="mod-table-control clr">
+						<ul class="mod-table-paging clr">
+							<li>
+								<a href="javascript:void(0);" onclick="return false;" class="ui-button ui-grey-button ui-sm-button">首页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">上一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">1</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">2</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">3</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">4</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">5</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">6</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button" disabled>...</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">18</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">下一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">尾页</a>
+							</li>
+						</ul>
+						<div class="mod-table-skip">
+							<span class="count">共计<span class="count_txt">2173</span>条数据</span>
+							<span class="page">页面：<span class="page_txt">2/109</span></span>
+							<input type="text" class="ui-input ui-sm-input">
+							<button class="ui-button ui-grey-button">跳转</button>
+						</div>
+					</div>
+					<div class="mod-table-action">
+						<div class="row">
+							<button class="ui-button" id="import">导入</button>
+							<button class="ui-button" id="export">导出</button>
+							<button class="ui-button ui-blue-button" id="settle">结算</button>
+							<div class="mod-table-right">
+								<span>结算金额共<em data-rmb>20568058.53</em>元，</span>
+								<span>统计交易金额共<em data-rmb>20638111.03</em>元，</span>
+								<span>全部共<em>2173</em>条记录</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 时间选择 -->
+<script src="js/jedate/jedate.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+
+		/*解绑按钮*/
+		$(".unterm_btn").on("click",function(e){
+			var un = new Window();
+			un.alert({
+				title:"警告",
+				content:"确定取消绑定吗？"
+			});
+			un.on("submit",function(){
+				/*默认8秒*/
+				loading(5000,function(){
+					new Window().common({content:'操作超时！'});
+				});
+				/*arguments[0] 时间
+				* arguments[1] 回调
+				*/
+			});
+		});
+		/*end 解绑按钮*/
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			// theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+
+		/*时间选择*/
+		var start = {
+		    dateCell: '#start_time',
+		    format: 'YYYY-MM-DD',
+		    choosefun: function(elem,datas){
+		        end.minDate = datas; //开始日选好后，重置结束日的最小日期
+		    }
+		};
+		var end = {
+		    dateCell: '#end_time',
+		    format: 'YYYY-MM-DD',
+		    choosefun: function(elem,datas){
+		        start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+		    }
+		};
+		jeDate(start);
+		jeDate(end);
+		/*end 时间选择*/
+
+		/*mod-table表格*/
+		var t = $(".mod-table table tr");
+		/*阻止冒泡*/
+		$("button,input,select,a",t).on("click",function(e){e.stopPropagation();});
+		/*单选*/
+		t.on("click",function(){$("td:first-child input:checkbox",this).length && $("td:first-child input:checkbox",this).attr("checked",($("td:first-child input:checkbox",this).attr("checked") == undefined));});
+		/*全选*/
+		var h = $(".mod-table table th:first-child input:checkbox");
+		if(h.length){
+			h.on("click",function(){
+				$(".mod-table table td:first-child input:checkbox").attr("checked",($(this).attr("checked") != undefined));
+			});
+		}
+		/*end mod-table表格*/
+	})();
+
+
+	
+</script>
+</html>

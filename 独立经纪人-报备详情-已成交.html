@@ -1,0 +1,241 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title></title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<style>
+		.mod-detail-row.pic{font-size: 0;}
+		.mod-detail-row.pic img{max-height: 200px;width: auto;display: inline-block;margin-right: 10px;}
+		.time-group{padding-left: 1.2em;border-left:4px solid #e2e3e4;line-height: 2;}
+	</style>
+</head>
+<body class="detail">
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>功能</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>账户管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>客户报备</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 10px;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<!-- mod-detail -->
+			<div class="mod-detail">
+				<div class="mod-detail-container">
+					<div class="mod-detail-content">
+						<div class="mod-detail-tit">
+							<span class="mod-detail-tit-txt">访客报备</span>
+							<!-- <span class="mod-detail-tit-subTxt">(账户名：admins)</span> -->
+							<!-- <span class="mod-detail-tit-sub-txt mod-detail-tit-r-txt">上次登录时间：2016-09-14 10:53</span> -->
+						</div>
+						<div class="mod-detail-main">
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">预约号:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">201606031558   22/10/001</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">姓名:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">李晓明</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">性别:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">女</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">身份证号:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">51152419910303030</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">手机号:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">18580305252</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">地区:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">江北区</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">所属楼盘:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">金科十年城</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">意向户型:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">两室</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">客户来源:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">独立经纪人</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">经纪人:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">金几仁</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">报备时间:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">2016-02-26  10:00</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">预约时间:</span>
+								<div class="mod-detail-list-content">
+									<div class="time-group">
+										<p>
+											<span class="mod-detail-txt">2016-03-01  15:13</span>
+										</p>
+										<p>
+											<span class="mod-detail-txt">2016-03-01  15:13</span>
+										</p>
+									</div>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">客户到访:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">2次</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">客户到访:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">2016-03-01  10:03</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">客户状态:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">已成交</span>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">佣金:</span>
+								<div class="mod-detail-list-content">
+									<span class="mod-detail-txt">2014.01</span>
+								</div>
+							</label>
+							<label class="mod-detail-row pic">
+								<span class="mod-detail-list-tit">客户照片:</span>
+								<div class="mod-detail-list-content">
+									<img src="img/avatar.jpg" alt="">
+									<img src="img/avatar.jpg" alt="">
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end mod-detail -->
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+
+		/*验证*/
+		
+		/*end 验证*/
+
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+		
+	})();
+
+	
+</script>
+</html>

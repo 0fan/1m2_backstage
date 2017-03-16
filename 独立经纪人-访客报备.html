@@ -1,0 +1,219 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>收单流水-修改-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<link rel="stylesheet" href="css/select.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body class="detail">
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>功能</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>账户管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>客户报备</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 10px;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<!-- mod-detail -->
+			<div class="mod-detail">
+				<div class="mod-detail-container">
+					<div class="mod-detail-content">
+						<div class="mod-detail-tit">
+							<span class="mod-detail-tit-txt">访客报备</span>
+							<!-- <span class="mod-detail-tit-subTxt">(账户名：admins)</span> -->
+							<!-- <span class="mod-detail-tit-sub-txt mod-detail-tit-r-txt">上次登录时间：2016-09-14 10:53</span> -->
+						</div>
+						<div class="mod-detail-main">
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">姓名:</span>
+								<div class="mod-detail-list-content">
+									<input type="text" class="ui-input" autocomplete="off">
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">性别:</span>
+								<div class="mod-detail-list-content">
+									<label class="mod-detail-inlineBlock">
+										<span>男</span>
+										<input type="radio" name="sex" value="male" id="">
+									</label>
+									<label class="mod-detail-inlineBlock">
+										<span>女</span>
+										<input type="radio" name="sex" value="female" id="">
+									</label>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">手机号:</span>
+								<div class="mod-detail-list-content">
+									<input type="text" class="ui-input" autocomplete="off">
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">购买区域:</span>
+								<div class="mod-detail-list-content">
+									<select name="" id="" class="ui-select">
+										<option value="">东方古国</option>
+										<option value="">的风格个地方豆腐干</option>
+										<option value="">感到反感豆腐干</option>
+										<option value="">豆腐干豆腐干鬼地方豆腐干</option>
+										<option value="">v从v下次梵蒂冈地方</option>
+										<option value="">退热贴个地方豆腐干</option>
+										<option value="">大小非电风扇</option>
+										<option value="">犯得上东方宾馆郭德纲鬼地方犯得上东方宾馆郭德纲鬼地方</option>
+										<option value="">法国德国高浮雕鬼地方</option>
+									</select>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">购买楼盘:</span>
+								<div class="mod-detail-list-content">
+									<select name="" id="" class="ui-select">
+										<option value="">东方古国</option>
+										<option value="">的风格个地方豆腐干</option>
+										<option value="">感到反感豆腐干</option>
+										<option value="">豆腐干豆腐干鬼地方豆腐干</option>
+										<option value="">v从v下次梵蒂冈地方</option>
+										<option value="">退热贴个地方豆腐干</option>
+										<option value="">大小非电风扇</option>
+										<option value="">犯得上东方宾馆郭德纲鬼地方犯得上东方宾馆郭德纲鬼地方</option>
+										<option value="">法国德国高浮雕鬼地方</option>
+									</select>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">意向户型:</span>
+								<div class="mod-detail-list-content">
+									<select name="" id="" class="ui-select">
+										<option value="">东方古国</option>
+										<option value="">的风格个地方豆腐干</option>
+										<option value="">感到反感豆腐干</option>
+										<option value="">豆腐干豆腐干鬼地方豆腐干</option>
+										<option value="">v从v下次梵蒂冈地方</option>
+										<option value="">退热贴个地方豆腐干</option>
+										<option value="">大小非电风扇</option>
+										<option value="">犯得上东方宾馆郭德纲鬼地方犯得上东方宾馆郭德纲鬼地方</option>
+										<option value="">法国德国高浮雕鬼地方</option>
+									</select>
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">客户头像:</span>
+								<div class="mod-detail-list-content">
+									<input type="file" name="" id="">
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<span class="mod-detail-list-tit">身份证照:</span>
+								<div class="mod-detail-list-content">
+									<input type="file" name="" id="">
+								</div>
+							</label>
+							<label class="mod-detail-row">
+								<div class="mod-detail-list-content">
+									<input type="submit" class="ui-button">
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end mod-detail -->
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script src="js/select.js"></script>
+<script>
+
+	(function(){
+
+		/*验证*/
+		
+		/*end 验证*/
+
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+		
+	})();
+
+	
+</script>
+</html>

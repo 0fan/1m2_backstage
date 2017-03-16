@@ -1,0 +1,461 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>用户主页-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<link rel="stylesheet" href="css/material.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山<span class="role">(用户)</span></a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<!-- <div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>用户主页</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt nav_txt_h"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>用户主页</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 0px;}</style>
+	</div> -->
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main" style="padding-left: 0;">
+		<div class="main_container">
+			<div class="main_content">
+				<h1 class="main_tit">用户主页</h1>
+				<!-- mod-statistics -->
+				<div class="mod-statistics">
+					<div class="mod-statistics-row">
+						<div class="mod-statistics-col-2">
+							<div class="mod-statistics-block">
+								<h3 data-rmb>146488121<span class="deci">.06</span></h3>
+								<div class="mod-statistics-block-tit">
+									<span class="mod-statistics-ico icon-10"></span><span class="mod-statistics-block-tit-txt">账户总额</span>
+								</div>
+							</div>
+						</div>
+						<div class="mod-statistics-col-2">
+							<div class="mod-statistics-block">
+								<h3 data-rmb>145228536<span class="deci">.06</span></h3>
+								<div class="mod-statistics-block-tit">
+									<span class="mod-statistics-ico icon-20"></span>
+									<span class="mod-statistics-block-tit-txt">冻结金额</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end mod-statistics -->
+				<div class="mod-table for161118">
+					<div class="mod-table-container">
+						<table class="mod-table-content simsun" id="table">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col width="100px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										<span class="mod-table-tit">
+											终端号
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											刷卡时间
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											交易金额
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											订单号
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											地区
+										</span>
+									</th>
+									<th style="text-align: center;padding: 0;">
+										<span class="mod-table-tit">
+											操作
+										</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>00000001</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td class="money"><span data-rmb>50000.00</span></td>
+									<td>20160305171300430592</td>
+									<td>湖南</td>
+									<td style="text-align: center;padding: 0;">
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button  ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- <div class="mod-table-control clr">
+						<ul class="mod-table-paging clr">
+							<li>
+								<a href="javascript:void(0);" onclick="return false;" class="ui-button ui-grey-button ui-sm-button">首页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">上一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">1</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">2</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">3</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">4</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">5</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">6</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button" disabled>...</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">18</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">下一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">尾页</a>
+							</li>
+						</ul>
+						<div class="mod-table-skip">
+							<span class="count">共计<span class="count_txt">2173</span>条数据</span>
+							<span class="page">页面：<span class="page_txt">2/109</span></span>
+							<input type="text" class="ui-input ui-sm-input">
+							<button class="ui-button ui-grey-button">跳转</button>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 时间选择 -->
+<script src="js/jedate/jedate.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+
+		// var tr = $(".mod-table tbody tr");
+		// for( var i=0,len=tr.length;i<len;i++ ){
+		// 	tr.eq(i).addClass("animation");
+		// 	tr.eq(i).css({
+		// 		animation : "fadeInRight .5s " + i * 0.06 + "s ease forwards"
+		// 	});
+		// }
+
+
+		/*验证*/
+		/*== 信息补全验证 ==*/
+		$("#form_complete").validate({
+			errorClass:"ui-error-input",
+			errorPlacement: function(error, element) { 
+				error.addClass("ui-explain ui-explain-inline ui-error-explain");
+			    element.after(error);
+			},
+			success: function(label) {
+				label.prev("input").addClass("ui-success-input");
+				label.addClass("ui-explain ui-explain-inline ui-success-explain").removeClass("ui-warming-explain ui-error-explain");
+			},
+			rules : {
+				term_id : {
+					required: true,
+					minlength : 2,
+					maxlength : 10
+				},
+				real_name : {
+					required: true,
+					minlength : 2,
+					maxlength : 16
+				},
+				phone : {
+					required : true,
+					number : true
+				},
+				id_card : {
+					required : true,
+					number : true
+				}
+			},
+			messages : {
+				term_id : {
+					required: "请输入终端号"
+				},
+				real_name : {
+					required: "请输入用户名"
+				},
+				phone : {
+					required : "请输入手机号",
+					number : "格式错误"
+				},
+				id_card : {
+					required : "请输入身份证号码",
+					number : "格式错误"
+				}
+			}
+		});
+		/*end 信息补全验证*/
+		/*end 验证*/
+
+		/*导入弹出*/
+		$("#import").on("click",function(){
+			/*判断是否选择了一条记录*/
+			($(".w_import").css("display") == "none") && ($(".w_import").show(),$(".public_mask").show());
+			$(".w_import_close").on("click",function(){$(".w_import").hide(),$(".public_mask").hide()});
+			$(".w_import_cancel").on("click",function(){$(".w_import").hide(),$(".public_mask").hide();});
+			$(".w_import_submit").on("click",function(){$(".w_import").hide(),$(".public_mask").hide()})
+		});
+		/*end 导入弹出*/
+
+		/*导出弹出*/
+		$("#export").on("click",function(){
+			/*判断是否选择了一条记录*/
+			var tab = $(".mod-table table tbody tr");
+			var s = 0;
+			for(var i = 0,len = tab.length; i<len; i++){
+				var _tab = tab.eq(i);
+				if($("td:first-child input:checkbox",_tab).length && ($("td:first-child input:checkbox",_tab).attr("checked") != undefined)){
+					s++;
+				}
+			}
+
+			if(s){  /*如果至少有一条记录选中*/
+				var w_export = new Window();
+				w_export.alert({
+					title:"结算确认",
+					content:"确认导出<span style='font-size:18px;color:#f44336;margin:0 5px;'>" + s + "</span>条数据吗？",
+					submit:"确认",
+					cancel:"取消"
+				});
+			}else{ /*一条记录都没有选*/
+				var w_export = new Window();
+				w_export.alert({
+					content : "请至少选择一条记录！",
+					cancel : ""
+				});
+				settle_w.on("submit",function(){
+					/*submit事件*/
+				});
+				settle_w.on("cancel",function(){
+					/*cancel事件*/
+				});
+				settle_w.on("close",function(){
+					/*关闭窗口事件*/
+				});
+			}
+		});
+		/*end 导入弹出*/
+
+		/*结算弹出*/
+		$("#settle").on("click",function(){
+			/*判断是否选择了一条记录*/
+			var tab = $(".mod-table table tbody tr");
+			var s = 0;
+			for(var i = 0,len = tab.length; i<len; i++){
+				var _tab = tab.eq(i);
+				if($("td:first-child input:checkbox",_tab).length && ($("td:first-child input:checkbox",_tab).attr("checked") != undefined)){
+					s++;
+				}
+			}
+
+			if(s){ /*如果至少有一条记录选中*/
+				var settle_w = new Window();
+				settle_w.alert({
+					title:"结算确认",
+					content:"确认结算<span style='font-size:18px;color:#f44336;margin:0 5px;'>" + s + "</span>条数据吗？",
+					submit:"确认",
+					cancel:"取消"
+				});
+				settle_w.on("submit",function(){
+					loading();
+					setTimeout(function(){
+						unloading();
+						new Window().common({content:'修改成功！'});
+					},5000);
+				});
+				settle_w.on("cancel",function(){
+					/*cancel事件*/
+				});
+				settle_w.on("close",function(){
+					/*关闭窗口事件*/
+				});
+			}else{ /*一条记录都没有选*/
+				var settle_w = new Window();
+				settle_w.alert({
+					content : "请至少选择一条记录！",
+					cancel : ""
+				});
+			}
+		});
+		/*end 结算弹出*/
+
+		/*补全弹出*/
+		$(".ui-thin-button").on("click",function(){
+			($(".w_complete").css("display") == "none") && ($(".w_complete").show(),$(".public_mask").show());
+			$(".w_complete_close").on("click",function(){$(".w_complete").hide(),$(".public_mask").hide()});
+			$(".w_complete_cancel").on("click",function(){$(".w_complete").hide(),$(".public_mask").hide()});
+			// $(".w_complete_submit").on("click",function(){$(".w_complete").hide(),$(".public_mask").hide()});
+		})
+		/*end 补全弹出*/
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+
+		/*时间选择*/
+		var start = {
+		    dateCell: '#start_time',
+		    format: 'YYYY-MM-DD',
+		    choosefun: function(elem,datas){
+		        end.minDate = datas; //开始日选好后，重置结束日的最小日期
+		    }
+		};
+		var end = {
+		    dateCell: '#end_time',
+		    format: 'YYYY-MM-DD',
+		    choosefun: function(elem,datas){
+		        start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+		    }
+		};
+		jeDate(start);
+		jeDate(end);
+		/*end 时间选择*/
+
+		/*mod-table表格*/
+		var t = $(".mod-table table tr");
+		/*阻止冒泡*/
+		$("button,input,select,a",t).on("click",function(e){e.stopPropagation();});
+		/*单选*/
+		t.on("click",function(){$("td:first-child input:checkbox",this).length && $("td:first-child input:checkbox",this).attr("checked",($("td:first-child input:checkbox",this).attr("checked") == undefined));});
+		/*全选*/
+		var h = $(".mod-table table th:first-child input:checkbox");
+		if(h.length){
+			h.on("click",function(){
+				$(".mod-table table td:first-child input:checkbox").attr("checked",($(this).attr("checked") != undefined));
+			});
+		}
+		/*end mod-table表格*/
+
+		/*$(".mod-table table thead th").on("mouseenter",function(e){
+			(function(){
+				var i = $(e.target).index();
+				var tr = $(".mod-table table tbody tr");
+				for(var j=0,len=tr.length;j<len;j++){
+					tr.eq(j).find("td").eq(i).css({backgroundColor:"#eceff1"});
+				}
+			})();
+		});
+
+		$(".mod-table table thead th").on("mouseleave",function(e){
+			(function(){
+				var i = $(e.target).index();
+				var tr = $(".mod-table table tbody tr");
+				for(var j=0,len=tr.length;j<len;j++){
+					tr.eq(j).find("td").eq(i).css({backgroundColor:"transparent"});
+				}
+			})();
+		});*/
+
+	})();
+
+
+	
+</script>
+</html>

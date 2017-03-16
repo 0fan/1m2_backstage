@@ -1,0 +1,376 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>开发商首页-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<!-- <link rel="stylesheet" href="js/jedate/skin/jedate.css"> -->
+	<link rel="stylesheet" href="js/datepicker/datepicker.css">
+	<link rel="stylesheet" href="css/select.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content ">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content ">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt nav_txt_h"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content ">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content ">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 0px;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="main_content">
+				<h1 class="main_tit">开发商首页</h1>
+				<!-- mod-statistics -->
+				<div class="mod-statistics">
+					<div class="mod-statistics-row">
+						<div class="mod-statistics-col-4">
+							<div class="mod-statistics-block">
+								<h3 data-rmb>123456<span class="deci">.78</span></h3>
+								<div class="mod-statistics-block-tit">
+									<span class="mod-statistics-ico icon-10"></span><span class="mod-statistics-block-tit-txt">账户总额</span>
+								</div>
+							</div>
+						</div>
+						<div class="mod-statistics-col-4">
+							<div class="mod-statistics-block">
+								<h3 data-rmb>4564565244<span class="deci">.99</span></h3>
+								<div class="mod-statistics-block-tit">
+									<span class="mod-statistics-ico icon-4"></span>
+									<span class="mod-statistics-block-tit-txt">应收金额</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end mod-statistics -->
+				<!-- mod-search -->
+				<div class="mod-search">
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">分公司：</span>
+							<select name="" id="" class="ui-select">
+								<option value="0">全部</option>
+								<option value="0">我爱北京天安门，天安门前太阳升</option>
+							</select>
+						</label>
+						<label>
+							<span class="ui-label">所有楼盘：</span>
+							<select name="" id="" class="ui-select">
+								<option value="0">全部</option>
+								<option value="0">我爱北京天安门，天安门前太阳升</option>
+							</select>
+						</label>
+						<label>
+							<span class="ui-label">统计时间</span>
+							<input type="text" class="ui-input ui-input-date" id="d1" readonly="true">
+						</label>
+						<button class="ui-button">搜索</button>
+					</div>
+				</div>
+				<!-- end mod-search -->
+				<!-- mod-charts -->
+				<div class="mod-charts">
+					<div class="mod-charts-block" id="chart_visitors" style="height:400px;"></div>
+					<div class="mod-charts-block" id="chart_clinch" style="height:400px;"></div>
+					<div class="mod-charts-block" id="chart_houseType" style="height:400px;"></div>
+					<div class="mod-charts-block">
+						<!-- <img src="img/no-data.png" alt=""> -->
+					</div>
+				</div>
+				<!-- end mod-charts -->
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 时间选择 -->
+<!-- <script src="js/jedate/jedate.min.js"></script> -->
+<script src="js/datepicker/datepicker.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<!-- 图表 -->
+<script src="js/echarts.min.js"></script>
+<!-- 临时存储 -->
+<script src="js/store.min.js"></script>
+<script src="js/store-nav.js"></script>
+<script src="js/select.js"></script>
+<script>
+
+	(function(){
+
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+
+		/*时间选择*/
+		var dStart = new Datepicker();
+		dStart.render({
+			obj : $("#d1"),
+			minYear : 1992,
+			maxYear : 2056,
+			lFormat:"yyyy-MM-dd 00:00:00",
+		});
+
+		/*end 时间选择*/
+
+		/*初始化图表*/
+		var chart_visitors = echarts.init(document.getElementById("chart_visitors"));
+		chart_visitors.setOption({
+			tooltip : {
+		        trigger: 'axis',
+		        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+		            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+		        }
+		    },
+		    toolbox: {
+		    	right : 40,
+		    	itemGap : 20,
+		    	itemSize : 46,
+	            feature: {
+
+	                mySortVisit: {
+	                    show: true,
+	                    title: '到访量升序',
+	                    icon: "image://img/daofang.png",
+	                    onclick: function (){
+	                        /*这里写排序*/
+	                    }
+	                },
+	                mySortDeal: {
+	                    show: true,
+	                    title: '到访量升序',
+	                    icon: "image://img/chengjiao.png",
+	                    onclick: function (){
+	                        /*这里写排序*/
+	                    }
+	                }
+	            }
+	        },
+			title : {
+				text : "访客统计图（单位：人）"
+			},
+			xAxis : {
+				data : ["A渠道商","B渠道商","C渠道商","D渠道商","E渠道商","F渠道商","G渠道商"]
+			},
+			yAxis : {},
+			legend : {
+				data : ["到访人数","成交人数"]
+			},
+			dataZoom :{},
+
+			series : [
+
+				{
+					name : "到访人数",
+					type : "bar",
+					label : {
+						normal : {
+							show : true,
+							position :"top"
+						} 
+					},
+					data : [20,150,45,89,1,4,5],
+					barWidth : "30px",
+					color : ["#2d8aea"]
+				},
+				{
+					name : "成交人数",
+					type : "bar",
+					label : {
+						normal : {
+							show : true,
+							position :"top"
+						} 
+					},
+					data : [7,8,91,154,45,32,45],
+					barWidth : "30px",
+					color : ["#ff6769"]
+				}
+			]
+		});
+		var chart_clinch = echarts.init(document.getElementById("chart_clinch"));
+		chart_clinch.setOption({
+			tooltip : {
+		        trigger: 'axis',
+		        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+		            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+		        }
+		    },
+			title : {
+				text : "成交统计表（单位：套）"
+			},
+			xAxis : {
+				data : ["A楼盘","B楼盘","C楼盘","D楼盘","E楼盘","F楼盘","G楼盘"]
+			},
+			yAxis : {},
+			dataZoom :{},
+			series : [{
+				type : "bar",
+				label : {
+					normal : {
+						show : true,
+						position :"top"
+					} 
+				},
+				data : [50,960,80,70,50,12,35],
+				barWidth: "30px",
+				color : ["#2d8aea"]
+			}]
+		});
+		var chart_houseType = echarts.init(document.getElementById("chart_houseType"));
+		chart_houseType.setOption({
+			tooltip: {
+		        trigger: 'item',
+		        formatter: "{b}: {c} ({d}%)"
+		    },
+			title : {
+				text : "户型统计图"
+			},
+			color : ["#70ad47","#5b9bd5","#ed7d31","#ffc000","#4472c4"],
+			legend: {
+			        orient: 'vertical',
+			        x: 'left',
+			        top : 50,
+			        data:['高层小区','别墅','商铺','商业街']
+			},
+			series : [{
+				type : "pie",
+				radius : ['40%', '60%'],
+				label: {
+	                normal: {
+	                    show: false,
+	                    position: 'center'
+	                },
+	                emphasis: {
+	                    show: true,
+	                    textStyle: {
+	                        fontSize: '26',
+	                        fontWeight: 'bold'
+	                    }
+	                }
+	            },
+				data : [
+					{value:335,name:"高层小区"},
+					{value:315,name:"别墅"},
+					{value:400,name:"商铺"},
+					{value:154,name:"商业街"}
+				]
+			}]
+		});
+		$(window).on("resize",function(){
+			chart_visitors.resize();
+			chart_clinch.resize();
+			chart_houseType.resize();
+		});
+	})();
+
+
+	
+</script>
+</html>

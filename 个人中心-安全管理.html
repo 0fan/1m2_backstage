@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>个人中心-安全管理-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body class="userCenter">
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<!-- mod-userCenter -->
+			<div class="mod-userCenter mod-userCenter-safa">
+				<div class="mod-userCenter-header">
+					<ul class="mod-userCenter-nav clr">
+						<li class="mod-userCenter-item">
+							<a href="#">账户资料</a>
+						</li>
+						<li class="mod-userCenter-item">
+							<a href="#" class="mod-userCenter-nav-h">安全管理</a>
+						</li>
+						<li class="mod-userCenter-item">
+							<a href="#">银行卡管理</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mod-userCenter-content">
+					<h3>安全管理</h3>
+					<div class="mod-userCenter-row">
+						<span class="mod-userCenter-tit-txt">你好，超级管理员(admins)</span>
+					</div>
+					<div class="mod-userCenter-row" style="padding:5px 0;">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt" style="line-height:50px;">安全等级</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<div class="mod-userCenter-safa low">
+								低
+							</div>
+						</div>
+					</div>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">登录密码</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<span class="mod-userCenter-item-content-txt">建议修改长度为6-14位、大小写字母、数字、下划线混合设置密码，请不要和支付密码设成一样。</span>
+							<a href="#" class="mod-userCenter-safa-control">重置</a>
+						</div>
+					</div>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">支付密码</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<span class="mod-userCenter-item-content-txt">建议长度为6-14位、大小写字母、数字、混合设置密码，请不要和登录密码设成一样。</span>
+							<a href="#" class="mod-userCenter-safa-control">设置</a>
+						</div>
+					</div>
+					<div class="mod-userCenter-row">
+						<div class="mod-userCenter-tit">
+							<span class="mod-userCenter-tit-txt">绑定手机</span>
+						</div>
+						<div class="mod-userCenter-item-content">
+							<span class="mod-userCenter-item-content-txt">绑定手机后方便您找回登录密码及支付密码。</span>
+							<a href="#" class="mod-userCenter-safa-control">绑定</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end mod-userCenter -->
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+
+		
+		
+	})();
+
+	
+</script>
+</html>

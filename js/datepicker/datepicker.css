@@ -1,0 +1,20 @@
+* { margin: 0; padding: 0; }
+table { border-spacing: 0; border-collapse: collapse;}
+.datepicker_box {padding: 3px 3px 5px; width: 215px; position: absolute; border: 1px solid #999; box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15); z-index: 9999;background: #fff;}
+.datepicker_box:after { content: ""; display: block; position: absolute; background: url("datapicker_arrow.png") no-repeat; width: 12px; height: 6px; top: -6px; left: 13px; }
+.datepicker_header { position: relative; width: 215px; height: 31px; line-height: 31px; background: url("header_bg.png") no-repeat; text-align: center; }
+.datepicker_header .control_next { right: 7px; top: 7px; position: absolute; width: 16px; height: 16px; background: url("datepicker_next.png"); cursor: pointer; }
+.datepicker_header .control_pre { left: 7px; top: 7px; position: absolute; width: 16px; height: 16px; background: url("datepicker_pre.png"); cursor: pointer; }
+.datepicker_header .control_year { display: inline-block; width: 60px; margin-right: 4px; height: 20px; position: relative;top: 5px;vertical-align: top; outline: 0; background: #fff;}
+.datepicker_header .control_month { display: inline-block; height: 20px; width: 60px; position: relative;top: 5px;vertical-align: top; outline: 0;  background: #fff;}
+.date_container { table-layout: fixed;width: 215px;}
+.datepicker_body { padding: 7px 0; }
+.date_tit th { font-size: 12px; font-weight: bold; }
+.datepicker_action { text-align: right; }
+.clear_btn, .today_btn, .ok_btn { width: 48px; height: 24px; text-align: center; line-height: 24px; font-size: 12px; text-decoration: none; margin-left: 3px; display: inline-block; }
+.clear_btn, .today_btn { background: url("btn_bg.png") no-repeat; color: #1a1a1a; }
+.ok_btn { background: url("btn_pri_bg.png") no-repeat; color: #fff; }
+th { height: 29px; }
+.date_txt { font-size: 12px; color: #333; text-align: center; vertical-align: middle; font-family: Arial; width: 33px; height: 28px; background: url("date_txt.png") no-repeat center center; cursor: pointer; }
+.date_txt.loc { background: url("date_txt_loc.png") no-repeat center center; }
+.date_txt:hover { background: url("date_txt_hover.png") no-repeat center center; }

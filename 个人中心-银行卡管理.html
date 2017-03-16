@@ -1,0 +1,586 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>银行卡管理-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body class="userCenter">
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<!-- mod-userCenter -->
+			<div class="mod-userCenter">
+				<div class="mod-userCenter-header">
+					<ul class="mod-userCenter-nav clr">
+						<li class="mod-userCenter-item">
+							<a href="#">账户资料</a>
+						</li>
+						<li class="mod-userCenter-item">
+							<a href="#">安全管理</a>
+						</li>
+						<li class="mod-userCenter-item">
+							<a class="mod-userCenter-nav-h" href="#">银行卡管理</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mod-userCenter-content">
+					<h3>银行卡管理</h3>
+					<div class="mod-card">
+						<ul class="mod-card-list">
+							<li class="mod-card-item mod-card-default">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">1234</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">小背心</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****6666</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>	
+							<li class="mod-card-item mod-card-default">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-zg"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">1234</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">小背心</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****6666</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-gs"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-ny"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-js"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-yz"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-zs"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-jt"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-hx"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-gf"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-xy"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-szfz"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-ms"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-shpd"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>			
+							<li class="mod-card-item">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<!-- header -->
+										<div class="mod-card-h">
+											<div class="mod-card-logo mod-card-zhs"></div>
+											<div class="mod-card-r">
+												<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+											</div>
+										</div>
+										<!-- body -->
+										<div class="mod-card-b">
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+											</div>
+											<div class="mod-card-info">
+												<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+											</div>
+										</div>
+										<!-- footer -->
+										<div class="mod-card-f">
+											<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">设置为默认银行卡</a>
+											<div class="mod-card-r">
+												<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-red-btn">删除</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="mod-card-item mod-card-add">
+								<div class="mod-card-wrap">
+									<div class="mod-card-content">
+										<div class="mod-card-add-ico"></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end mod-userCenter -->
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	<!-- 修改头像 -->
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<!-- 输入提示 -->
+<script src="js/bankCard.js"></script>
+<script>
+
+	(function(){
+		/*银行卡业务相关*/
+		/*== 删除 ==*/
+		$(".mod-card-red-btn").on("click",function(){
+
+			/*获取当前银行卡信息*/
+			var obj   = $(this).parents(".mod-card-item"); 
+			var id    = obj.find(".mod-card-shortNum-txt").text();
+			var name  = obj.find(".mod-card-infot-txt").eq(0).text();
+			var phone = obj.find(".mod-card-infot-txt").eq(1).text();
+			var t = "<span style='color:red;'>(卡号:" + id + " 姓名:" +  name + " 手机号:" + phone + ")</span>";
+
+			var del_w = new Window();
+			del_w.prompt({
+				title:"警告",
+				promptType:"textarea",
+				content:"确定删除" + t + "银行卡卡吗？如果是请输入<span style='color:red;'>支付密码。</span>",
+				submit:"确认",
+				cancel:"让我好好考虑一下"
+			});
+			del_w.on("submit",function(){
+				/*submit事件*/
+				console.log(del_w.para.text);
+				/*del_w.para.password 为用户输入的密码*/
+			});
+			del_w.on("cancel",function(){
+				/*cancel事件*/
+			});
+			del_w.on("close",function(){
+				/*关闭窗口事件*/
+			});
+		});
+		/*== 设置默认卡 ==*/
+		$(".mod-card-blue-btn").on("click",function(){
+			var def_w = new Window();
+			def_w.alert({
+				content:"确定设置此卡为默认卡吗？"
+			});
+			def_w.on("submit",function(){
+				/*这里写验证信息*/
+				new Window().common({content:"设置成功!"});
+			});
+		});
+	})();
+
+	
+</script>
+</html>

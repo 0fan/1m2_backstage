@@ -1,0 +1,194 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>提现</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<link rel="stylesheet" href="css/select.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body class="detail">
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt nav_txt_h"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 0;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="mod-news">
+				<div class="mod-news-h clr">
+					<div class="tit">
+						<span class="txt">提现</span>
+					</div>
+				</div>
+				<div class="mod-news-b">
+					<div class="mod-tip _success">
+						<div class="mod-tip-left" style="line-height: 2;">
+							<span class="txt"><em>提现申请已提交，等待银行处理。</em><br>如果银行信息填写错误，导致提现失败，资金将自动退还到您的壹平方账户。</span>
+						</div>
+					</div>
+					<div class="mod-progress">
+							<div class="mod-progress-wrap">
+								<table class="mod-progress-content">
+									<tr>
+										<td class="mod-progress-item ed">
+											<div class="mod-progress-item-tit">1</div>
+											<div class="mod-progress-item-content">
+												<div class="tit">提现申请</div>
+											</div>
+										</td>
+										<td class="mod-progress-item ed">
+											<div class="mod-progress-item-tit">2</div>
+											<div class="mod-progress-item-content">
+												<div class="tit">银行处理</div>
+											</div>
+										</td>
+										<td class="mod-progress-item last">
+											<div class="mod-progress-item-tit">3</div>
+											<div class="mod-progress-item-content">
+												<div class="tit">提现成功</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-24">
+							<a href="javascript:void(0);" onclick="return false;" class="ui-button ui-blue-button">继续提现</a>
+							<a href="javascript:void(0);" onclick="return false;" class="ui-button ui-blue-button">查看提现记录</a>
+							<a href="javascript:void(0);" onclick="return false;" class="ui-button ui-blue-button">返回首页</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script src="js/select.js"></script>
+<script>
+
+	(function(){
+
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+		
+	})();
+
+	
+</script>
+</html>
+元

@@ -1,0 +1,1170 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>收单列表-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<link rel="stylesheet" href="css/material.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山</a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt nav_txt_h"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>渠道商管理</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>渠道商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>开发商管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paper-plane"></span></div>操作员管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-wechat"></span></div>终端管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-codepen"></span></div>楼盘管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-paw"></span></div>楼盘户型管理</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- end nav -->
+	
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="main_content">
+				<h1 class="main_tit">收单列表</h1>
+				<div class="mod-search">
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">收单时间：</span>
+							<input type="text" class="ui-input ui-input-date" value="2015-04-5" name="aaa" id="start_time" readonly="true">
+						</label>
+						<label>
+							<span class="ui-label">至</span>
+							<input type="text" class="ui-input ui-input-date" value="2015-05-4" name="bbb" id="end_time" readonly="true">
+						</label>
+						<div class="ui-button-group">
+							<button class="ui-button ui-link-button">今天</button>
+							<button class="ui-button ui-link-button">本周</button>
+							<button class="ui-button ui-link-button">本月</button>
+						</div>
+					</div>
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">楼盘名称：</span>
+							<select name="" id="" class="ui-select">
+								<option value="0">全部</option>
+								<option value="0">我爱北京天安门，天安门前太阳升</option>
+							</select>
+						</label>
+						<label>
+							<span class="ui-label">收款单位：</span>
+							<select name="" id="" class="ui-select">
+								<option value="0">全部</option>
+							</select>
+						</label>
+						<label>
+							<span class="ui-label">地区：</span>
+							<select name="" id="" class="ui-select">
+								<option value="0">全部</option>
+							</select>
+						</label>
+						<label>
+							<span class="ui-label">终端号：</span>
+							<input type="text" class="ui-input">
+						</label>
+						<button class="ui-button">搜索</button>
+					</div>
+					<div class="mod-search_row" data-toggle>
+						<label>
+							<span class="ui-label">终端类型：</span>
+						</label>
+						<input type="text" class="ui-input" value="全部" readonly="true" id="term_type">						
+
+					</div>
+				</div>
+				<div class="mod-table">
+					<div class="mod-table-container">
+						<table class="mod-table-content simsun" id="table">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col style="width:160px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											终端号
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											刷卡时间
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											交易金额
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											手续费
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											结算金额
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											订单号
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											楼盘名称
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											地区
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											终端类型
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											收款单位
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											状态
+										</span>
+									</th>
+									<th>
+										<span class="mod-table-tit">
+											操作
+										</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td  data-rmb>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td data-rmb>4545.4456</td>
+									<td data-rmb>12.12</td>
+									<td data-rmb>0.45</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td  data-rmb>445145.48</td>
+									<td data-rmb>0.99</td>
+									<td data-rmb>0.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button  ui-thin-button">修改</button>
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button  ui-thin-button">详情</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button ui-thin-button  ui-bordered-button ui-blue-button">下载合同</button>
+											<button class="ui-button ui-thin-button  ui-bordered-button ui-blue-button">下载身份</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-blue-button">补全信息</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button disabled class="ui-button  ui-thin-button ui-blue-button">补全信息</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-blue-button">补全信息</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>
+											<span class="ui-checkbox"></span>
+											<input type="checkbox" name="" id="" autocomplete="off">
+										</label>
+									</td>
+									<td>5454545</td>
+									<td>2015-04-05<br>20:45:64</td>
+									<td>4545.00</td>
+									<td>12.12</td>
+									<td>454.00</td>
+									<td>45645645</td>
+									<td>金科十年城</td>
+									<td>重庆</td>
+									<td>POS机</td>
+									<td>重庆壹平方有限公司</td>
+									<td>收单成功</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button ui-blue-button  ui-thin-button">补全信息</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="mod-table-control clr">
+						<ul class="mod-table-paging clr">
+							<li>
+								<a href="javascript:void(0);" onclick="return false;" class="ui-button ui-grey-button ui-sm-button">首页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">上一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">1</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">2</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">3</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">4</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">5</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">6</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button" disabled>...</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">18</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">下一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">尾页</a>
+							</li>
+						</ul>
+						<div class="mod-table-skip">
+							<span class="count">共计<span class="count_txt">2173</span>条数据</span>
+							<span class="page">页面：<span class="page_txt">2/109</span></span>
+							<input type="text" class="ui-input ui-sm-input">
+							<button class="ui-button ui-grey-button">跳转</button>
+						</div>
+					</div>
+					<div class="mod-table-action">
+						<div class="row">
+							<button class="ui-button" id="import">导入</button>
+							<button class="ui-button" id="export">导出</button>
+							<button class="ui-button ui-blue-button" id="settle">结算</button>
+							<div class="mod-table-right">
+								<span>结算金额共<em data-rmb>20568058.53</em>元，</span>
+								<span>统计交易金额共<em data-rmb>20638111.03</em>元，</span>
+								<span>全部共<em>2173</em>条记录</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	<!-- 导入 -->
+	<div class="w_import w_import_hide">
+		<div class="w_import_h">
+			<span class="w_import_title">批量导入</span>
+			<a class="w_import_close" href="javascript:void(0);" onclick="return false;"></a>
+		</div>
+		<div class="w_import_b">
+			<h1>请导入终端信息Excel表格</h1>
+			<p class="w_import_tip">Excel表格模版下载</p>
+			<a class="w_import_download" href="#">点此下载</a>
+			<input type="file">
+		</div>
+		<div class="w_import_f">
+			<button class="ui_button w_import_submit submit">上传</button>
+			<button class="ui_bordered_button w_import_cancel cancel">取消</button>
+		</div>
+	</div>
+	<!-- end 导入 -->
+	<!-- 信息补全 -->
+	<div class="w_complete w_complete_hide">
+		<form action="#" id="form_complete">
+			<div class="w_complete_h">
+				<span class="w_complete_title">信息补全</span>
+				<a class="w_complete_close" href="javascript:void(0);" onclick="return false;"></a>
+			</div>
+			<div class="w_complete_b">
+				<div class="w_complete_row">
+					<label>
+						<span class="w_complete_title"><i class="simsun">*</i>终端号：</span>
+						<div class="w_complete_formContorl">
+							<input type="text" disabled class="ui-input" readonly="true" value="5646546554" id="term_id" name="term_id">
+						</div>
+					</label>
+				</div>
+				<div class="w_complete_row">
+					<label>
+						<span class="w_complete_title"><i class="simsun">*</i>真实姓名：</span>
+						<div class="w_complete_formContorl">
+							<input type="text" class="ui-input" name="real_name" id="real_name">
+						</div>
+					</label>
+				</div>
+				<div class="w_complete_row">
+					<label>
+						<span class="w_complete_title"><i class="simsun">*</i>手机号：</span>
+						<div class="w_complete_formContorl">
+							<input type="text" class="ui-input" name="phone">
+						</div>
+					</label>
+				</div>
+				<div class="w_complete_row">
+					<label>
+						<span class="w_complete_title"><i class="simsun">*</i>身份证号：</span>
+						<div class="w_complete_formContorl">
+							<input type="text" class="ui-input" name="id_card">
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="w_complete_f">
+				<input type="submit" class="ui_button w_complete_submit submit" value="确定" id="w_complete_submit">
+			</div>
+		</form>
+	</div>
+	<!-- end 信息补全 -->
+
+	<!-- mod-select -->
+	<div class="mod-select" style="left:330px;top:298px;display: none;">
+		<div class="mod-select-wrap">
+			<div class="mod-select-content">
+				<div class="mod-select-h">
+					<div class="mod-select-nav">
+						<ul class="mod-select-nav-wrap">
+						</ul>
+					</div>
+				</div>
+				<div class="mod-select-b">
+					
+				</div>
+				<div class="mod-select-f"></div>
+			</div>
+		</div>
+	</div>
+	<!-- end mod-select -->
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 时间选择 -->
+<script src="js/jedate/jedate.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<!-- 获取汉字拼音 -->
+<script src="js/pinying.js"></script>
+<script>
+
+	(function(){
+
+		var datas = $(".buildingId");
+
+		var data = [];
+		for(var i=0,len=datas.length;i<len;i++){
+			data[i] = {};
+			data[i].id = datas.eq(i).attr("dataId");
+			data[i].txt = datas.eq(i).text();
+		}
+		
+
+		/*验证*/
+		/*== 信息补全验证 ==*/
+		$("#form_complete").validate({
+			errorClass:"ui-error-input block-error",
+			success: function(label) {
+				label.prev("input").addClass("ui-success-input");
+			},
+			rules : {
+				term_id : {
+					required: true,
+					minlength : 2,
+					maxlength : 10
+				},
+				real_name : {
+					required: true,
+					minlength : 2,
+					maxlength : 16
+				},
+				phone : {
+					required : true,
+					number : true
+				},
+				id_card : {
+					required : true,
+					number : true
+				}
+			},
+			messages : {
+				term_id : {
+					required: "请输入终端号"
+				},
+				real_name : {
+					required: "请输入用户名"
+				},
+				phone : {
+					required : "请输入手机号",
+					number : "格式错误"
+				},
+				id_card : {
+					required : "请输入身份证号码",
+					number : "格式错误"
+				}
+			}
+		});
+		/*end 信息补全验证*/
+		/*end 验证*/
+
+		/*导入弹出*/
+		$("#import").on("click",function(){
+			/*判断是否选择了一条记录*/
+			($(".w_import").css("display") == "none") && ($(".w_import").show(),$(".public_mask").show());
+			$(".w_import_close").on("click",function(){$(".w_import").hide(),$(".public_mask").hide()});
+			$(".w_import_cancel").on("click",function(){$(".w_import").hide(),$(".public_mask").hide();});
+			$(".w_import_submit").on("click",function(){$(".w_import").hide(),$(".public_mask").hide()})
+		});
+		/*end 导入弹出*/
+
+		/*导出弹出*/
+		$("#export").on("click",function(){
+			/*判断是否选择了一条记录*/
+			var tab = $(".mod-table table tbody tr");
+			var s = 0;
+			for(var i = 0,len = tab.length; i<len; i++){
+				var _tab = tab.eq(i);
+				if($("td:first-child input:checkbox",_tab).length && ($("td:first-child input:checkbox",_tab).attr("checked") != undefined)){
+					s++;
+				}
+			}
+
+			if(s){  /*如果至少有一条记录选中*/
+				var w_export = new Window();
+				w_export.alert({
+					title:"结算确认",
+					content:"确认导出<span style='font-size:18px;color:#f44336;margin:0 5px;'>" + s + "</span>条数据吗？",
+					submit:"确认",
+					cancel:"取消"
+				});
+			}else{ /*一条记录都没有选*/
+				var w_export = new Window();
+				w_export.prompt({
+					promptType:"password",
+					content:"请输入密码:",
+					submit:"确认",
+					cancel:""
+				});
+				w_export.on("submit",function(){
+					/*submit事件*/
+					console.log(w_export.para.password);
+				});
+				w_export.on("cancel",function(){
+					/*cancel事件*/
+				});
+				w_export.on("close",function(){
+					/*关闭窗口事件*/
+				});
+			}
+		});
+		/*end 导入弹出*/
+
+		/*结算弹出*/
+		$("#settle").on("click",function(){
+			/*判断是否选择了一条记录*/
+			var tab = $(".mod-table table tbody tr");
+			var s = 0;
+			for(var i = 0,len = tab.length; i<len; i++){
+				var _tab = tab.eq(i);
+				if($("td:first-child input:checkbox",_tab).length && ($("td:first-child input:checkbox",_tab).attr("checked") != undefined)){
+					s++;
+				}
+			}
+
+			if(s){ /*如果至少有一条记录选中*/
+				var settle_w = new Window();
+				settle_w.alert({
+					title:"结算确认",
+					content:"确认结算<span style='font-size:18px;color:#f44336;margin:0 5px;'>" + s + "</span>条数据吗？",
+					submit:"确认",
+					cancel:"取消"
+				});
+				settle_w.on("submit",function(){
+					loading();
+					setTimeout(function(){
+						unloading();
+						new Window().common({content:'修改成功！'});
+					},5000);
+				});
+				settle_w.on("cancel",function(){
+					/*cancel事件*/
+				});
+				settle_w.on("close",function(){
+					/*关闭窗口事件*/
+				});
+			}else{ /*一条记录都没有选*/
+				var settle_w = new Window();
+				settle_w.alert({
+					content : "请至少选择一条记录！",
+					cancel : ""
+				});
+			}
+		});
+		/*end 结算弹出*/
+
+		/*补全弹出*/
+		$(".ui-thin-button").on("click",function(){
+			($(".w_complete").css("display") == "none") && ($(".w_complete").show(),$(".public_mask").show());
+			$(".w_complete_close").on("click",function(){$(".w_complete").hide(),$(".public_mask").hide()});
+			$(".w_complete_cancel").on("click",function(){$(".w_complete").hide(),$(".public_mask").hide()});
+			// $(".w_complete_submit").on("click",function(){$(".w_complete").hide(),$(".public_mask").hide()});
+		})
+		/*end 补全弹出*/
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+
+		/*时间选择*/
+		var start = {
+		    dateCell: '#start_time',
+		    format: 'YYYY-MM-DD',
+		    choosefun: function(elem,datas){
+		        end.minDate = datas; //开始日选好后，重置结束日的最小日期
+		    }
+		};
+		var end = {
+		    dateCell: '#end_time',
+		    format: 'YYYY-MM-DD',
+		    choosefun: function(elem,datas){
+		        start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+		    }
+		};
+		jeDate(start);
+		jeDate(end);
+		/*end 时间选择*/
+
+		/*mod-table表格*/
+		var t = $(".mod-table table tr");
+		/*阻止冒泡*/
+		$("button,input,select,a",t).on("click",function(e){e.stopPropagation();});
+		/*单选*/
+		t.on("click",function(){$("td:first-child input:checkbox",this).length && $("td:first-child input:checkbox",this).attr("checked",($("td:first-child input:checkbox",this).attr("checked") == undefined));});
+		/*全选*/
+		var h = $(".mod-table table th:first-child input:checkbox");
+		if(h.length){
+			h.on("click",function(){
+				$(".mod-table table td:first-child input:checkbox").attr("checked",($(this).attr("checked") != undefined));
+			});
+		}
+		/*end mod-table表格*/
+
+		var  datas = [{"160623112125010044":"成都廊桥水乡"}, {"160623124238010061":"成都东方雅郡"}, {"160623124346010063":"成都金科中心"}, {"160623124443010065":"成都双楠天都"}, {"160623124549010067":"成都星耀天都"}, {"160623124710010069":"遂宁美湖湾"}, {"160623124809010071":"内江中央公园城"}, {"160623124900010073":"内江时代中心"}, {"160623125003010075":"内江公园王府"}, {"160623125134010077":"成都金科天籁城"}, {"160623125227010079":"云南金科阳光里"}, {"160623125351010081":"陕西天籁城"}, {"160623125457010083":"北京金科王府"}, {"160623125549010085":"青岛金科星辰"}, {"160623134124010138":"青岛阳光美镇"}, {"160623134236010140":"济南金科城"}, {"160623134339010142":"长沙世界城"}, {"160623134455010144":"长沙时代中心"}, {"160623134606010146":"郴州金科城"}, {"160623134653010148":"郴州钻石山"}, {"160623134830010150":"江阴东方华府"}, {"160623134929010152":"张家港廊桥雅苑"}, {"160623135112010154":"无锡城南世家"}, {"160623135159010156":"张家港廊桥美墅"}, {"160623135608010158":"金科柯福路一号"}, {"160623135724010160":"如皋世界城"}, {"160623135808010162":"无锡财富商业广场"}, {"160623135906010164":"苏州天籁花园"}, {"160623140014010166":"苏州观天下"}, {"160623140604010168":"新疆廊桥水乡中亚机电城"}, {"160623140717010170":"涪陵·天宸"}, {"160623140906010172":"开县维拉莊园"}, {"160623141015010174":"万州·观天下"}, {"160623141135010176":"涪陵·天籁城"}, {"160623141529010178":"涪陵·中央公园城"}, {"160623144702010199":"长寿·阳光小镇"}, {"160623145019010201":"长寿·世界城"}, {"160623145117010203":"南川·世界城"}, {"160623145206010205":"丰都·黄金海岸"}, {"160623145254010207":"开县·开州城"}, {"160623151242010209":"开县·财富中心"}, {"160623151404010211":"云阳·世界城"}, {"160623151450010213":"万盛.中华养生城"}, {"160623151549010215":"巫山金科城"}, {"160623151635010217":"涪陵·天宸"}, {"160623151802010219":"涪陵·天籁城"}, {"160623151913010221":"涪陵·中央公园城"}, {"160623152003010223":"长寿·阳光小镇"}, {"160623152256010225":"长寿·世界城"}, {"160623160036010247":"重庆金科时代"}, {"160623160128010249":"西永金科天宸"}, {"160623160432010272":"合川金科天籁城"}, {"160623161206010274":"璧山金科中央公园城"}, {"160623161254010276":"蔡家金科城"}, {"160623161350010278":"遵义金科中央公园城"}, {"160623161519010280":"江津金科中央公园城"}, {"160623161847010282":"重庆金科空港城"}, {"160623161934010284":"茶园金科中央御院"}, {"160623162016010286":"大学城廊桥水乡"}, {"160623162201010288":"重庆金科星辰"}, {"160623162248010290":"江津金科世界城"}, {"160623162334010292":"重庆西城大院"}, {"160623162413010294":"重庆金科10年城"}, {"160623162604010296":"重庆阳光小镇"}, {"160623162647010298":"重庆太阳海岸"}, {"160623162728010300":"茶园世界城"}, {"160623162806010302":"重庆公园王府"}, {"160623162849010304":"重庆天湖美镇 "}, {"160623162930010306":"重庆金科VISAR国际"}, {"160623163017010308":"重庆现房中心"}, {"160713114152010004":"肯德基"}, {"160713114342010006":"肯德基"}, {"160713114344010008":"肯德基"}, {"160713114346010010":"肯德基"}, {"160713142628010012":"肯德基"}, {"160714094234010003":"ss"}, {"160714105646010012":"yy"}, {}, {}, {"160801164405010012":"loupan"}, {"160804111340010002":"谁啊谁啊帅"}, {"160815140213010002":"111"}, {"160817165538010002":"哈哈楼盘"}, {"160901092229010002":"11111"}, {"160901092315010004":"22222"}, {"160901092320010006":"22222"}, {"160901092332010008":"22222"}, {"160901092608010002":"3333"}, {"160901092652010005":"4444"}, {"160901144708010032":"楼盘"}, {"160901145031010039":"楼盘2"}, {"160901155029010007":"222"}, {"160906161910010002":"过桥"}, {"160923110146010006":"腾讯众创空间"}, {"160923110632010009":"测试"}, {"160929153705010013":"哈哈"}];
+
+		var abc = {
+			other : [],
+			A : [],
+			B : [],
+			C : [],
+			D : [],
+			E : [],
+			F : [],
+			G : [],
+			H : [],
+			I : [],
+			J : [],
+			K : [],
+			L : [],
+			M : [],
+			N : [],
+			O : [],
+			P : [],
+			Q : [],
+			R : [],
+			S : [],
+			T : [],
+			U : [],
+			V : [],
+			W : [],
+			X : [],
+			Y : [],
+			Z : [],
+		};
+
+		for(var i = 0,len = datas.length;i<len; i++){
+			var _data = datas[i];
+			for(key in _data){
+				var char = _data[key].substr(0,1);
+				var k = makePy(_data[key].substr(0,1))[0];
+				if(k >= "A" && k <="Z"){
+					abc[k].push('<li class="mod-select-list-content-item"><a href="javascript:void(0);" onclick="return false;" dataid="' +  key + '">' + _data[key] + '</a></li>');
+				}else{
+					abc.other.push('<li class="mod-select-list-content-item"><a href="javascript:void(0);" onclick="return false;" dataid="' +  key + '">' + _data[key] + '</a></li>');
+				}
+			}
+		}
+
+		/*渲染数据*/
+		var head = $(".mod-select-nav-wrap");
+		var body = $(".mod-select-b");
+		for(key in abc){
+			/*头部*/
+			if(abc[key].length){
+				$('<li class="mod-select-nav-item"><a href="#mod-select-' + key + '" onclick="return false;">' + (key=="other"?"#":key) + '</a></li>').appendTo(head);
+				$('<div class="mod-select-list">\
+					<div class="mod-select-list-tit">\
+						<span class="mod-select-tit-txt" id="mod-select-' + (key=="other"?"0":key) + '">' + (key=="other"?"#":key) + '</span>\
+					</div>\
+					<div class="mod-select-list-content">\
+						<ul class="mod-select-list-content-wrap">\
+							'+ abc[key].join("") +'\
+						</ul>\
+					</div>\
+				</div>').appendTo(body);
+			}
+		}
+
+		$(".mod-select-nav").on("click",".mod-select-nav-item a:not('.dis')",function(){		
+			/*遍历前面的节点计算总高度等于body的scrollTop*/
+			var list = $($(this).attr("href")).parents(".mod-select-list");
+			var list_prevs = list.prevAll();
+			var h = 0;
+			list_prevs.each(function(index, el) {
+				h += $(this).outerHeight();
+			});
+			$(".mod-select-b").scrollTop(h);
+		});
+
+		$(".mod-select-list-content-item a").on("click",function(){
+			$("#term_type").attr("dataid",$(this).attr("dataid"));
+			$("#term_type").val($(this).text());
+			$(".mod-select").hide();
+		});
+		$("#term_type").on("focus",function(){
+			$(".mod-select").show();
+		});
+		$(document).bind("mouseup",function(e){
+		     e.stopPropagation();
+		     if($(e.target).closest($(".mod-select")).length==0 && $(e.target).closest($("#term_type")).length==0){
+		         $(".mod-select").hide(); 
+		     }
+		})
+
+	})();
+
+
+	
+</script>
+</html>

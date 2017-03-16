@@ -1,0 +1,365 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>独立经纪人-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/datepicker/datepicker.css">
+	<link rel="stylesheet" href="css/select.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<style>
+		.mod-card{margin: 0;}
+		.mod-card .mod-card-list{margin: 0;}
+		.mod-card .mod-card-item{margin: 0;float: right;margin-right: 20px;}
+		.mod-card .mod-card-add{display: none;}
+		.mod-statistics .mod-statistics-block{margin-top: 44px;}
+	</style>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/default-user-avata.png" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山<span class="role">(独立经纪人)</span></a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>功能</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt "><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>账户管理</a></li>
+					<li><a href="#" class="nav_txt"><div class="nav_ico_wrap"><span class="nav_ico icon-1"></span></div>客户报备</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 10px;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="main_content">
+				<h1 class="main_tit">你好，刘看山</h1>
+				<!-- mod-statistics -->
+				<div class="mod-statistics">
+					<div class="mod-statistics-row">
+						<div class="mod-statistics-col-4">
+							<div class="mod-statistics-block">
+								<h3 data-rmb>1908<span class="deci">.78</span></h3>
+								<div class="mod-statistics-block-tit">
+									<span class="mod-statistics-ico icon-10"></span><span class="mod-statistics-block-tit-txt">总佣金</span>
+								</div>
+							</div>
+						</div>
+						<div class="mod-statistics-col-4">
+							<div class="mod-statistics-block">
+								<h3 data-rmb>908<span class="deci">.80</span></h3>
+								<div class="mod-statistics-block-tit">
+									<span class="mod-statistics-ico icon-4"></span>
+									<span class="mod-statistics-block-tit-txt">可用佣金</span>
+								</div>
+							</div>
+						</div>
+						<div class="mod-statistics-col-2">
+							<div class="mod-card">
+								<ul class="mod-card-list">
+									<li class="mod-card-item mod-card-add">
+										<div class="mod-card-wrap">
+											<div class="mod-card-content">
+												<div class="mod-card-add-ico"></div>
+											</div>
+										</div>
+									</li>
+									<li class="mod-card-item">
+										<div class="mod-card-wrap">
+											<div class="mod-card-content">
+												<!-- header -->
+												<div class="mod-card-h">
+													<div class="mod-card-logo mod-card-zg"></div>
+													<div class="mod-card-r">
+														<span class="mod-card-shortNum">尾号：<span class="mod-card-shortNum-txt">9687</span></span>
+													</div>
+												</div>
+												<!-- body -->
+												<div class="mod-card-b">
+													<div class="mod-card-info">
+														<span class="mod-card-info-tit">持卡人姓名 : <span class="mod-card-infot-txt">刘看山</span></span>
+													</div>
+													<div class="mod-card-info">
+														<span class="mod-card-info-tit">手机号 : <span class="mod-card-infot-txt">158****8346</span></span>
+													</div>
+												</div>
+												<!-- footer -->
+												<div class="mod-card-f">
+													<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">管理</a>
+													<div class="mod-card-r">
+														<a href="javascript:void(0);" onclick="return false;" class="mod-card-btn mod-card-blue-btn">提现</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end mod-statistics -->
+				<!-- mod-search -->
+				<div class="mod-search">
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">报备时间：</span>
+							<input type="text" class="ui-input ui-input-date" value="2015-04-5" name="aaa" id="start_time" readonly="true">
+						</label>
+						<label>
+							<span class="ui-label">至</span>
+							<input type="text" class="ui-input ui-input-date" value="2015-05-4" name="bbb" id="end_time" readonly="true">
+						</label>
+						<div class="ui-button-group">
+							<button class="ui-button ui-link-button">今天</button>
+							<button class="ui-button ui-link-button">本周</button>
+							<button class="ui-button ui-link-button">本月</button>
+						</div>
+					</div>
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">所属楼盘：</span>
+							<select name="" id="" class="ui-droplist-orgin">
+								<option value="0">全部</option>
+							</select>
+						</label>
+					</div>
+					<div class="mod-search_row">
+						<label>
+							<span class="ui-label">状态：</span>
+						</label>
+						<button class="ui-button ui-thin-button ui-bordered-button ui-bordered-button_h">全部</button>
+						<button class="ui-button ui-thin-button ui-bordered-button">已报备</button>
+						<button class="ui-button ui-thin-button ui-bordered-button">报备失败</button>
+						<button class="ui-button ui-thin-button ui-bordered-button">已成交</button>
+						<button class="ui-button ui-thin-button ui-bordered-button">退款</button>
+						<button class="ui-button">搜索</button>
+					</div>
+				</div>
+				<!-- end mod-search -->
+				<div class="mod-table">
+					<div class="mod-table-container">
+						<table class="mod-table-content simsun" id="table">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col style="width:160px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th><span class="mod-table-tit">手机号</span></th>
+									<th><span class="mod-table-tit">姓名</span></th>
+									<th><span class="mod-table-tit">性别</span></th>
+									<th><span class="mod-table-tit">地区</span></th>
+									<th><span class="mod-table-tit">楼盘</span></th>
+									<th><span class="mod-table-tit">意向户型</span></th>
+									<th><span class="mod-table-tit">报备时间</span></th>
+									<th><span class="mod-table-tit">客户状态</span></th>
+									<th><span class="mod-table-tit">操作</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>18580305358</td>
+									<td>张晓红</td>
+									<td>女</td>
+									<td>江北</td>
+									<td>金科十年城</td>
+									<td>两室</td>
+									<td>2015-09-25<br>10:32:00</td>
+									<td>已报备</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>18580305358</td>
+									<td>张晓红</td>
+									<td>女</td>
+									<td>江北</td>
+									<td>金科十年城</td>
+									<td>两室</td>
+									<td>2015-09-25<br>10:32:00</td>
+									<td>已报备</td>
+									<td>
+										<div class="ui-button-group">
+											<button class="ui-button  ui-thin-button ui-bordered-button ui-blue-button">修改</button>
+										</div>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<div class="mod-table-control clr">
+						<ul class="mod-table-paging clr">
+							<li>
+								<a href="javascript:void(0);" onclick="return false;" class="ui-button ui-grey-button ui-sm-button">首页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">上一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">1</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">2</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">3</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">4</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">5</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">6</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button" disabled>...</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">18</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">下一页</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="return false;"  class="ui-button ui-grey-button ui-sm-button">尾页</a>
+							</li>
+						</ul>
+						<div class="mod-table-skip">
+							<span class="count">共计<span class="count_txt">2173</span>条数据</span>
+							<span class="page">页面：<span class="page_txt">2/109</span></span>
+							<input type="text" class="ui-input ui-sm-input">
+							<button class="ui-button ui-grey-button">跳转</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 时间选择 -->
+<script src="js/datepicker/datepicker.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script src="js/select.js"></script>
+<script>
+
+	(function(){
+
+		
+		/*菜单*/
+		$("#nav").mCustomScrollbar({
+			scrollInertia:0,
+			autoHideScrollbar:true,
+			theme:"dark"
+		});
+
+		var nav = $("#nav");
+		var nav_item = nav.find(".nav_content");
+		for(var i=0,len=nav_item.length;i<len;i++){
+			$(".nav_root",nav_item.eq(i)).on("click",function(){
+				$(this).parent().hasClass("nav_open") ? $(this).parent().removeClass("nav_open") : $(this).parent().addClass("nav_open");
+			});
+		}
+		/*end 菜单*/
+
+		/*start时间选择。*/
+		Datepicker().render({
+			obj:$("#start_time"),
+			minYear:2000,
+			maxYear:2088,
+			lFormat:"yyyy-MM-dd",
+			sFormat:"yyyy-MM"
+		});
+		Datepicker().render({
+			obj:$("#end_time"),
+			minYear:2000,
+			maxYear:2088,
+			lFormat:"yyyy-MM-dd",
+			sFormat:"yyyy-MM"
+		});
+		/*end时间选择。*/
+
+		/*mod-table表格*/
+		var t = $(".mod-table table tr");
+		/*阻止冒泡*/
+		$("button,input,select,a",t).on("click",function(e){e.stopPropagation();});
+		/*单选*/
+		t.on("click",function(){$("td:first-child input:checkbox",this).length && $("td:first-child input:checkbox",this).attr("checked",($("td:first-child input:checkbox",this).attr("checked") == undefined));});
+		/*全选*/
+		var h = $(".mod-table table th:first-child input:checkbox");
+		if(h.length){
+			h.on("click",function(){
+				$(".mod-table table td:first-child input:checkbox").attr("checked",($(this).attr("checked") != undefined));
+			});
+		}
+		/*end mod-table表格*/
+	})();
+
+
+	
+</script>
+</html>

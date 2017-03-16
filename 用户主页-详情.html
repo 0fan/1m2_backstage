@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="modern" lang="zh-cmn-Hans"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>交易详情-壹平方</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="js/jedate/skin/jedate.css">
+	<link rel="stylesheet" href="css/material.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<a href="#" class="logo"></a>
+		<ul class="nav-right clr">
+			<li class="avatar">
+				<a href="#">
+					<div class="avatar_wrap">
+						<img src="img/avatar.jpg" alt="">
+					</div>
+				</a>
+				<script>
+					/*resize avatar img*/
+					(function(){
+						$(".avatar img").load(function(){
+							$(this).width() < $(this).height() ? $(this).width(30).height("auto") : $(this).height(30).width("auto");
+						});
+					})();
+				</script>
+			</li>
+			<li class="id">
+				<a href="#">刘看山<span class="role">(用户)</span></a>
+			</li>
+			<li class="spacer">
+				<i></i>
+			</li>
+			<li class="quit">
+				<a href="javascript:void(0);" onclick="return false;">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end header -->
+	<!-- nav -->
+	<div class="nav" id="nav">
+		<ul class="nav_container">
+			<li class="nav_content nav_open">
+				<a href="javascript:void(0);" onclick="return false;" class="nav_root"><i class="arrow-r"></i>用户主页</a>
+				<ul class="nav_drop">
+					<li><a href="#" class="nav_txt nav_txt_h"><div class="nav_ico_wrap"><span class="nav_ico icon-street-view"></span></div>用户主页</a></li>
+				</ul>
+			</li>
+		</ul>
+		<style>.mCSB_inside > .mCSB_container{margin-right: 0px;}</style>
+	</div>
+	<!-- end nav -->
+	<!-- main -->
+	<div class="main">
+		<div class="main_container">
+			<div class="main_content">
+				<!-- mod-detail -->
+				<div class="mod-detail for161117">
+					<div class="mod-detail-container">
+						<div class="mod-detail-content">
+							<div class="mod-detail-tit">
+								<span class="mod-detail-tit-txt">交易详情</span>
+								<!-- <span class="mod-detail-tit-subTxt">(账户名：admins)</span> -->
+								<!-- <span class="mod-detail-tit-sub-txt mod-detail-tit-r-txt">上次登录时间：2016-09-14 10:53</span> -->
+							</div>
+							<div class="mod-detail-main">
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>真实姓名:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">赵晓磊</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>交易金额:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt" data-rmb>10000.00</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>身份证号:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">51152419910303030</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>手机号码:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">18580305252</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>刷卡时间:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">2015-09-25 10:32:00</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>订单号:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">200511524199103135050</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>地区:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">重庆</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>银行卡号:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">511524********5050</span>
+									</div>
+								</label>
+								<label class="mod-detail-row">
+									<span class="mod-detail-list-tit"><i class="icon material"></i>交易状态:</span>
+									<div class="mod-detail-list-content">
+										<span class="mod-detail-txt">已冻结</span>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end mod-detail -->
+			</div>
+		</div>
+	</div>
+	<!-- end main -->
+	<!-- 全局mask -->
+	<div class="public_mask hide"></div>
+	<!-- end 全局mask -->
+	
+
+</body>
+<!-- 滚动条 -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- 时间选择 -->
+<script src="js/jedate/jedate.min.js"></script>
+<!-- 弹窗组件 -->
+<script src="js/window.js"></script>
+<!-- 验证 -->
+<script src="js/jquery.validate.min.js"></script>
+<!-- tip -->
+<script src="js/tip.js"></script>
+<script>
+
+	(function(){
+
+	
+
+	})();
+
+
+	
+</script>
+</html>
